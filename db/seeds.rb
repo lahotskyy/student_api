@@ -6,7 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 10.times do |n|
-  Student.create(first_name: "Student #{n}",
-                 last_name: "Last_name #{n}",
-                 age: "#{n}")
+  Student.create(first_name: "Student #{n + 1}",
+                 last_name: "StudentSurname #{n + 1}",
+                 age: "#{n + 2}")
+end
+5.times do |n|
+  Teacher.create(first_name: "Teacher #{n + 1}",
+                last_name: "TeacherSurname #{n + 1}",
+                group: "The Suns")
+  Teacher.create(first_name: "Teacher #{n + 6}",
+                last_name: "TeacherSurname #{n + 6}",
+                group: "The Moons")
 end
